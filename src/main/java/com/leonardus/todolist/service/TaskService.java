@@ -59,7 +59,7 @@ public class TaskService {
         Task task = this.findTaskById(id);
 
         switch (status){
-            case "to_do" -> task.setStatus(TaskStatus.TO_DO);
+            case "to-do" -> task.setStatus(TaskStatus.TO_DO);
             case "doing" -> task.setStatus(TaskStatus.DOING);
             case "done" -> task.setStatus(TaskStatus.DONE);
             default -> throw new DataIntegrityViolationException("Invalid status");

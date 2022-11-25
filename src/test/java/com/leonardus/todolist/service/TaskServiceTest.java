@@ -152,7 +152,7 @@ class TaskServiceTest {
 
     @Test
     void updateStatus_UpdatesStatusToTODO_WhenSuccessful() {
-        Task response = service.updateStatus(ID, "to_do");
+        Task response = service.updateStatus(ID, "to-do");
         assertEquals(TaskStatus.TO_DO, response.getStatus());
     }
 
