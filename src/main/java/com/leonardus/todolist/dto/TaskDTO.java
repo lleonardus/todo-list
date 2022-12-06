@@ -20,7 +20,7 @@ public class TaskDTO {
     private String title;
     @NotBlank(message = "The description field is required")
     private String description;
-    private Date deadLine;
+    private Date deadline;
     private TaskStatus status;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

@@ -20,25 +20,25 @@ public class TestConfig {
                 .title("task 1")
                 .description("first task")
                 .status(TaskStatus.TO_DO)
-                .deadLine(new Date())
+                .deadline(new Date())
                 .build();
 
         Task t2 = Task.builder()
                 .title("task 2")
                 .description("second task")
                 .status(TaskStatus.TO_DO)
-                .deadLine(new Date())
+                .deadline(new Date())
                 .build();
 
         Task t3 = Task.builder()
                 .title("task 3")
                 .description("third task")
                 .status(TaskStatus.TO_DO)
-                .deadLine(new Date())
+                .deadline(new Date())
                 .build();
 
         repository.saveAll(List.of(t1, t2, t3));
 
-        return args -> log.info("Database started successfully!");
+        return args -> log.info("H2 database started successfully!");
     }
 }

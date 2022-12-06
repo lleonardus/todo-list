@@ -26,7 +26,7 @@ $ ./mvnw spring-boot:run
 - GET - `/tasks/title/{title}`: Exibe todas as tarefas com um título específico.
 - GET - `/tasks/id/{id}`: Exibe uma tarefa em específico.
 - POST - `/tasks`: Cria uma nova tarefa.
-- PUT - `/tasks/id/{id}`: Atualiza os campos title, description e deadLine de uma tarefa em específico.
+- PUT - `/tasks/id/{id}`: Atualiza os campos title, description e deadline de uma tarefa em específico.
 - PUT - `/tasks/id/{id}/status/{status}`: Atualiza o status de uma tarefa em específico. Os possíveis valores de um status são: to-do, doing e done.
 - DELETE - `/tasks/id/{id}`: Deleta uma tarefa em específico.
 
@@ -36,7 +36,7 @@ $ ./mvnw spring-boot:run
 {
     "title": "Task 1",
     "description": "Creating new Task",
-    "deadLine": "2022-10-06"
+    "deadline": "2022-10-06"
 }
 ```
 
@@ -46,7 +46,7 @@ $ ./mvnw spring-boot:run
 {
     "title": "Update",
     "description": "Updating Task",
-    "deadLine": "2022-11-06"
+    "deadline": "2022-11-06"
 }
 ```
 

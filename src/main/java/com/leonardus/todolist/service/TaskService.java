@@ -35,8 +35,8 @@ public class TaskService {
     public Task createTask(TaskDTO taskDTO){
         taskDTO.setStatus(TaskStatus.TO_DO);
 
-        if (taskDTO.getDeadLine() == null){
-            taskDTO.setDeadLine(new Date());
+        if (taskDTO.getDeadline() == null){
+            taskDTO.setDeadline(new Date());
         }
 
         return repository.save(mapper.map(taskDTO, Task.class));
@@ -48,8 +48,8 @@ public class TaskService {
         task.setTitle(taskDTO.getTitle());
         task.setDescription(taskDTO.getDescription());
 
-        if (taskDTO.getDeadLine() != null) {
-            task.setDeadLine(taskDTO.getDeadLine());
+        if (taskDTO.getDeadline() != null) {
+            task.setDeadline(taskDTO.getDeadline());
         }
 
         return repository.save(task);

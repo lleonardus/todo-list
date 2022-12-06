@@ -15,7 +15,7 @@ import java.util.Date;
 @Data
 @Builder
 @AllArgsConstructor @NoArgsConstructor
-@Entity
+@Entity(name = "tasks")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,8 +27,8 @@ public class Task {
     @Column(nullable = false)
     private String description;
 
-    @Column(nullable = false, name = "dead_line")
-    private Date deadLine;
+    @Column(nullable = false, name = "deadline")
+    private Date deadline;
 
     @Column(nullable = false)
     private TaskStatus status;

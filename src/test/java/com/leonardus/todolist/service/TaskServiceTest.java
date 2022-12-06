@@ -97,52 +97,52 @@ class TaskServiceTest {
         assertNotNull(response);
         assertEquals(task.getTitle(), response.getTitle());
         assertEquals(task.getDescription(), response.getDescription());
-        assertEquals(task.getDeadLine(), response.getDeadLine());
+        assertEquals(task.getDeadline(), response.getDeadline());
         assertEquals(TaskStatus.TO_DO, response.getStatus());
         assertEquals(task.getCreatedAt(), response.getCreatedAt());
         assertEquals(task.getUpdatedAt(), response.getUpdatedAt());
     }
 
     @Test
-    void createTask_ReturnsATask_WhenDeadLineIsNull() {
-        taskDTO.setDeadLine(null);
+    void createTask_ReturnsATask_WhenDeadlineIsNull() {
+        taskDTO.setDeadline(null);
         Task response = service.createTask(taskDTO);
 
         assertNotNull(response);
         assertEquals(task.getTitle(), response.getTitle());
         assertEquals(task.getDescription(), response.getDescription());
-        assertNotNull(response.getDeadLine());
+        assertNotNull(response.getDeadline());
         assertEquals(TaskStatus.TO_DO, response.getStatus());
         assertEquals(task.getCreatedAt(), response.getCreatedAt());
         assertEquals(task.getUpdatedAt(), response.getUpdatedAt());
     }
 
     @Test
-    void updateTask_ReturnsATask_WhenDeadLineIsNotNull() {
+    void updateTask_ReturnsATask_WhenDeadlineIsNotNull() {
         taskDTO.setTitle("new title");
         taskDTO.setDescription("new description");
-        taskDTO.setDeadLine(new Date());
+        taskDTO.setDeadline(new Date());
 
         Task response = service.updateTask(ID, taskDTO);
 
         assertNotNull(response);
         assertEquals("new title", response.getTitle());
         assertEquals("new description", response.getDescription());
-        assertNotNull(response.getDeadLine());
+        assertNotNull(response.getDeadline());
     }
 
     @Test
-    void updateTask_ReturnsATask_WhenDeadLineIsNull() {
+    void updateTask_ReturnsATask_WhenDeadlineIsNull() {
         taskDTO.setTitle("new title");
         taskDTO.setDescription("new description");
-        taskDTO.setDeadLine(null);
+        taskDTO.setDeadline(null);
 
         Task response = service.updateTask(ID, taskDTO);
 
         assertNotNull(response);
         assertEquals("new title", response.getTitle());
         assertEquals("new description", response.getDescription());
-        assertNotNull(response.getDeadLine());
+        assertNotNull(response.getDeadline());
     }
 
     @Test
