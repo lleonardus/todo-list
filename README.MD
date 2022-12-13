@@ -56,6 +56,5 @@ pode ser acessado em **http://localhost:8080/h2-console/**
 4. Spring Data JPA
 5. H2 database
 6. Spring Validation
-7. Docker
+7. Model Mapper
 8. Lombok
-9. Model Mapper
