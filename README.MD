@@ -5,18 +5,16 @@ A api foi desenvolvida com o intuito de exercitar meus conhecimentos em Java e S
 O projeto trata-se de um gerenciador de tarefas, onde é possível realizar as 4 operações do CRUD.
 
 ## 💿Como rodar o projeto
+**Pré-requisitos**: Git e Java 17
 
-### 🐳Utilizando Docker
-Caso tenha o Docker e o Docker Compose na sua máquina, basta utilizar o seguinte comando:
 ``` shell
-$ docker-compose up
-```
-
-### ♨️Utilizando Maven
-Caso tenha o JDK 17, basta utilizar o seguinte comando:
-``` shell
+$ git clone https://github.com/lleonardus/todo-list.git
+$ cd todo-list
 $ ./mvnw spring-boot:run
 ```
+
+Após esse processo, a api vai estar rodando em **http://localhost:8080** e o banco de dados (H2 database)
+pode ser acessado em **http://localhost:8080/h2-console/**
 
 ## 🎯Endpoints
 
